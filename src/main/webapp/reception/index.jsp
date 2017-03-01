@@ -16,12 +16,12 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta http-equiv="description" content="This is my page">
 <meta http-equiv="keywords" content="仓储设备,机电设备,运输设备">
-<link rel="icon" href="view/reception/images/favicon.ico" type="image/x-icon">
-<link href="view/reception/css/ime.css" rel="stylesheet" type="text/css">
-<script type="text/javascript" src="view/reception/js/jquery.min.1.7.js"></script>
-<script type="text/javascript" src="view/reception/js/jquery-ui-1.10.3.custom.min.js"></script>
-<script type="text/javascript" src="view/reception/js/jquery.easing.1.3.js"></script>
-<script type="text/javascript" src="view/reception/js/diy_index/public-all.js"></script>
+<link rel="icon" href="<%=path%>/reception//images/favicon.ico" type="image/x-icon">
+<link href="<%=path%>/reception/css/ime.css" rel="stylesheet" type="text/css">
+<script type="text/javascript" src="<%=path%>/reception/js/jquery.min.1.7.js"></script>
+<script type="text/javascript" src="<%=path%>/reception/js/jquery-ui-1.10.3.custom.min.js"></script>
+<script type="text/javascript" src="<%=path%>/reception/js/jquery.easing.1.3.js"></script>
+<script type="text/javascript" src="<%=path%>/reception/js/diy_index/public-all.js"></script>
 
 
 </head>
@@ -30,12 +30,12 @@
 <body onload="onLoadIndexData()">
 <jsp:include page="indexHeader.jsp"></jsp:include>
 <div id="banner">
-  <div id="banner1" style="display: block;"><img src="view/reception/images/banner1.jpg"></div>
-  <div id="banner2" style="display: none;"><img src="view/reception/images/banner2.jpg"></div>
-  <div id="banner3" style="display: none;"><img src="view/reception/images/banner3.jpg"></div>
+  <div id="banner1" style="display: block;"><img src="<%=path%>/reception/images/banner1.jpg"></div>
+  <div id="banner2" style="display: none;"><img src="<%=path%>/reception/images/banner2.jpg"></div>
+  <div id="banner3" style="display: none;"><img src="<%=path%>/reception/images/banner3.jpg"></div>
 </div>
 
-<img src="http://liufei.226009.com/1.png"/>
+
 <script type="text/javascript">
 var tab=1;
 var prev=null;
@@ -64,25 +64,25 @@ var auto=setInterval(function(){autoShow(tab,prev);},3000);
 </script>
 <div style="width:1000px; height:30px; margin:auto; position:relative; z-index:6;">
   <div style="width:1000px; height:400px; top:-430px; position:absolute; z-index:6; overflow:hidden;">
-  <div style="width:150px; height:45px; background:#0067AC; position:absolute; z-index:7; color:#FFF; text-align:center; font-size:14px; line-height:42px; font-weight:bold; top:355px;">模范案例<img src="view/reception/images/arr.gif" style="margin-left:8px; margin-top:-2px;"></div>
+  <div style="width:150px; height:45px; background:#0067AC; position:absolute; z-index:7; color:#FFF; text-align:center; font-size:14px; line-height:42px; font-weight:bold; top:355px;">模范案例<img src="<%=path%>/reception//images/arr.gif" style="margin-left:8px; margin-top:-2px;"></div>
   <div class="solution" style="left: 150px; top: 355px; background-color: rgb(255, 255, 255);">
     <p style="line-height: 42px; padding-left: 16px; padding-top: 0px; color: rgb(102, 102, 102);">
-    <img src="view/reception/images/icon_1.png" height="28" style="margin-right: 5px; margin-top: 7px; float: left; width: 28px; height: 28px;">三峡工程</p>
+    <img src="<%=path%>/reception//images/icon_1.png" height="28" style="margin-right: 5px; margin-top: 7px; float: left; width: 28px; height: 28px;">三峡工程</p>
     <p style="padding:10px 26px; line-height:180%;">三峡水电站是世界上规模最大的水电站，也是中国有史以来建设最大型的工程项目，是全世界最大的水力发电站和清洁能源生产基地。</p>
   </div>
   <div class="solution" style="left:360px;">
     <p style="line-height:42px; padding-left:16px;">
-    <img src="view/reception/images/icon_2.png" height="28" style="margin-right:10px; margin-top:7px; float:left;">航天事业</p>
+    <img src="<%=path%>/reception//images/icon_2.png" height="28" style="margin-right:10px; margin-top:7px; float:left;">航天事业</p>
     <p style="padding:10px 26px; line-height:180%;">酒泉卫星发射中心是中国最早建成的运载火箭发射试验基地，截至2005年10月，中国发射了约50颗人造卫星，其中37颗在酒泉发射。</p>
   </div>
   <div class="solution" style="left:570px;">
     <p style="line-height:42px; padding-left:16px;">
-    <img src="view/reception/images/icon_3.png" height="28" style="margin-right:10px; margin-top:7px; float:left;">南水北调</p>
+    <img src="<%=path%>/reception//images/icon_3.png" height="28" style="margin-right:10px; margin-top:7px; float:left;">南水北调</p>
     <p style="padding:10px 26px; line-height:180%;">南水北调是缓解中国北方水资源严重短缺局面的战略性工程，通过跨流域的水资源合理配置，大大缓解我国北方水资源严重短缺问题，分东线、中线、西线三条调水线。</p>
   </div>
   <div class="solution" style="left:780px;">
     <p style="line-height:42px; padding-left:16px;">
-    <img src="view/reception/images/icon_4.png" height="28" style="margin-right:10px; margin-top:7px; float:left;">中国石油</p>
+    <img src="<%=path%>/reception//images/icon_4.png" height="28" style="margin-right:10px; margin-top:7px; float:left;">中国石油</p>
     <p style="padding:10px 26px; line-height:180%;">中国石油天然气集团公司是一家集油气勘探开发、炼油化工、油品销售、油气储运、石油贸易、工程技术服务和石油装备制造于一体的综合性能源公司。</p>
   </div>
   </div>
@@ -111,12 +111,12 @@ $(".solution").hover(function(){
   </div>
   <div style="float:left; width:260px; margin-left:30px;">
     <div style="width:260px; height:130px; background:#0066AC; position:relative; z-index:1; cursor:pointer;" id="videoblcok"> <!--onclick="location.href=&#39;video.php&#39;;   -->
-      <img src="view/reception/images/icon_play.png" height="80" style="position:absolute; right:22px; top:24px;">
+      <img src="<%=path%>/reception//images/icon_play.png" height="80" style="position:absolute; right:22px; top:24px;">
       <p style="padding-top:40px; padding-left:22px; color:#FFF; font-size:16px;">视频中心</p>
       <p style="padding-top:4px; padding-left:22px; color:#A8CBE3; font-size:11px;">JK Video Center</p>
     </div>
     <div style="width:260px; height:130px; margin-top:10px; background:#DDD; position:relative; z-index:1; cursor:pointer;" id="showblock" onclick="location.href='productAction_onLoadProductToJsp'" ><!--onclick="location.href=&#39;product_360.php&#39;;"   -->
-      <img src="view/reception/images/icon_rotation.png" height="76" style="position:absolute; right:22px; top:25px;">
+      <img src="<%=path%>/reception//images/icon_rotation.png" height="76" style="position:absolute; right:22px; top:25px;">
       <p style="padding-top:40px; padding-left:22px; font-size:16px;">产品展示</p>
       <p style="padding-top:4px; padding-left:22px; color:#AAA; font-size:11px;">360° Product Display</p>
     </div>

@@ -16,11 +16,11 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 	<meta http-equiv="expires" content="0">    
 	<meta http-equiv="keywords" content="keyword1,keyword2,keyword3">
 	<meta http-equiv="description" content="This is my page">
-	<link href="view/reception/css/ime.css" rel="stylesheet" type="text/css">
-	<script type="text/javascript" src="view/reception/js/jquery.min.1.7.js"></script>
-	<script type="text/javascript" src="view/reception/js/jquery-ui-1.10.3.custom.min.js"></script>
-	<script type="text/javascript" src="view/reception/js/jquery.easing.1.3.js"></script>
-	<script type="text/javascript" src="view/reception/js/diy_index/js.js"></script>
+	<link href="<%=path%>/reception/css/ime.css" rel="stylesheet" type="text/css">
+	<script type="text/javascript" src="<%=path%>/reception/js/jquery.min.1.7.js"></script>
+	<script type="text/javascript" src="<%=path%>/reception/js/jquery-ui-1.10.3.custom.min.js"></script>
+	<script type="text/javascript" src="<%=path%>/reception/js/jquery.easing.1.3.js"></script>
+	<script type="text/javascript" src="<%=path%>/reception/js/diy_index/js.js"></script>
   </head>
   
   <body onload="onloadIndexHeader()">
@@ -29,26 +29,26 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 		  </div>
 		</div>
 		<div id="top" >
-		  <div id="logo"><a href="view/reception/index.jsp"><img src="view/reception/images/logo.png"></a></div>
+		  <div id="logo"><a href="<%=path%>/reception/index.jsp"><img src="<%=path%>/reception/images/logo.png"></a></div>
 		  <ul id="menu" style="">
-			<li><a href='view/reception/about.jsp?num=1' class=''>走进劲凯</a>
+			<li><a href='<%=path%>/reception//about.jsp?num=1' class=''>走进劲凯</a>
 			<div style='display: none; overflow: hidden; height: auto; margin-top: 0px; margin-bottom: 0px; padding-top: 10px; padding-bottom: 15px;'>
-					<a href='view/reception/about.jsp?num=1'>企业概况</a><a href='view/reception/about.jsp?num=2'>企业文化</a><a href='view/reception/about.jsp?num=3'>发展历史</a><a href='view/reception/about.jsp?num=4'>联系我们</a>
+					<a href='<%=path%>/reception//about.jsp?num=1'>企业概况</a><a href='<%=path%>/reception//about.jsp?num=2'>企业文化</a><a href='<%=path%>/reception//about.jsp?num=3'>发展历史</a><a href='<%=path%>/reception//about.jsp?num=4'>联系我们</a>
 				</div>
 			</li>
-			<li class='split'><img src='view/reception/images/menu_split.gif'>
+			<li class='split'><img src='<%=path%>/reception//images/menu_split.gif'>
 			</li>
 			<li><a href='newsAction_onLoadNewsTitleToJsp' class=''>新闻中心</a>
 			<div style='display: none; overflow: hidden; height: auto; margin-top: 0px; margin-bottom: 0px; padding-top: 10px; padding-bottom: 15px;'>
 					<a href='newsAction_onLoadNewsTitleToJsp'>公司新闻</a><a href='newsAction_onLoadNewsTitleToJsp'>行业新闻</a>
 				</div>
 			</li>
-			<li class='split'><img src='view/reception/images/menu_split.gif'>
+			<li class='split'><img src='<%=path%>/reception//images/menu_split.gif'>
 			</li>
-			<li><a href='view/reception/productCase.jsp' class=''>产品案例</a>
+			<li><a href='<%=path%>/reception//productCase.jsp' class=''>产品案例</a>
 			<div style='display: none; overflow: hidden; height: auto; margin-top: 0px; margin-bottom: 0px; padding-top: 10px; padding-bottom: 15px;'></div>
 			</li>
-			<li class='split'><img src='view/reception/images/menu_split.gif'>
+			<li class='split'><img src='<%=path%>/reception//images/menu_split.gif'>
 			</li>
 			<li><a href='productAction_onLoadProductToJsp' class=''>产品中心</a>
 			<div style='display: none; overflow: hidden; height: auto; margin-top: 0px; margin-bottom: 0px; padding-top: 10px; padding-bottom: 15px;'>
@@ -56,24 +56,24 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 						href='productAction_onLoadProductToJsp'>工具柜系列</a>
 				</div>
 			</li>
-			<li class='split'><img src='view/reception/images/menu_split.gif'>
+			<li class='split'><img src='<%=path%>/reception//images/menu_split.gif'>
 			</li>
-			<li><a href='view/reception/resource.jsp' class=''>加入我们</a>
+			<li><a href='<%=path%>/reception//resource.jsp' class=''>加入我们</a>
 			<div style='display: none; overflow: hidden; height: auto; margin-top: 0px; margin-bottom: 0px; padding-top: 10px; padding-bottom: 15px;'>
 					<a href='asdasd'>招聘职位</a>
 				</div>
 			</li>
-			<li class='split'><img src='view/reception/images/menu_split.gif'>
+			<li class='split'><img src='<%=path%>/reception//images/menu_split.gif'>
 			</li>
-			<li><a href='view/reception/support.jsp' class=''>服务与支持</a>
+			<li><a href='<%=path%>/reception//support.jsp' class=''>服务与支持</a>
 			<div style='display: none; overflow: hidden; height: auto; margin-top: 0px; margin-bottom: 0px; padding-top: 10px; padding-bottom: 15px;'></div>
 			</li>
-			<li class='split'><img src='view/reception/images/menu_split.gif'>
+			<li class='split'><img src='<%=path%>/reception//images/menu_split.gif'>
 			</li>
 		</ul>   <!-- 菜单栏加载 --> 
 		  <div id="search">
 			  <form id="formsearch" name="formsearch" method="get" action="###">    
-			    <div style="width:36px; height:28px; float:right;"><img src="view/reception/images/search_btn.png" style="cursor:pointer;" ></div><!--onclick="$(&#39;#formsearch&#39;).submit();"   -->
+			    <div style="width:36px; height:28px; float:right;"><img src="<%=path%>/reception//images/search_btn.png" style="cursor:pointer;" ></div><!--onclick="$(&#39;#formsearch&#39;).submit();"   -->
 			    <div style="background:#EEE; height:28px; line-height:26px; width:150px; float:right; border-radius:4px 0px 0px 4px;"><input type="text" name="keys" id="keys" value="关键词…" style="background:none; border:0px none; padding:5px; margin-left:2px; margin-top:1px; color:#888; width:130px; outline:none;"></div>
 			  </form>
 		  </div>

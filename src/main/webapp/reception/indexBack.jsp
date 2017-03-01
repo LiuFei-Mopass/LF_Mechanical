@@ -16,7 +16,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 	<meta http-equiv="expires" content="0">    
 	<meta http-equiv="keywords" content="keyword1,keyword2,keyword3">
 	<meta http-equiv="description" content="This is my page">
-	<link href="view/reception/css/ime.css" rel="stylesheet" type="text/css">
+	<link href="<%=path%>/reception//css/ime.css" rel="stylesheet" type="text/css">
 
   </head>
   
@@ -24,13 +24,13 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 <div id="bottom">
   <div style="width:1000px; margin:auto; height:50px;">
   <div id="bottom_l">
-    <img src="view/reception/images/icon_tel.png" style="position:absolute; left:10px; top:10px;">总机：<span style="font-family:Arial, Tahoma; font-size:16px; font-weight:bold;">023-47633233</span>　　
+    <img src="<%=path%>/reception//images/icon_tel.png" style="position:absolute; left:10px; top:10px;">总机：<span style="font-family:Arial, Tahoma; font-size:16px; font-weight:bold;">023-47633233</span>　　
     传真：<span style="font-family:Arial, Tahoma; font-size:16px; font-weight:bold;">023-47633233-803</span>　　
   <!--   服务热线：<span style="font-family:Arial, Tahoma; font-size:16px; font-weight:bold;">400-8263-733</span> -->　　
    <!--  销售热线：<span style="font-family:Arial, Tahoma; font-size:16px; font-weight:bold;">0577-62729666</span> -->
   </div>
-  <div id="bottom_r" onclick="location.href='view/reception/sendEmail.jsp'" ><!-- onclick="location.href=&#39;bossmail.php&#39;;"   -->
-    <img src="view/reception/images/icon_mail.png"  style="margin-right:8px;">董事长信箱
+  <div id="bottom_r" onclick="location.href='<%=path%>/reception//sendEmail.jsp'" ><!-- onclick="location.href=&#39;bossmail.php&#39;;"   -->
+    <img src="<%=path%>/reception//images/icon_mail.png"  style="margin-right:8px;">董事长信箱
   </div>
   </div>
 </div>
@@ -54,10 +54,10 @@ $("#bottom_r").hover(function(){
       <p style="margin-top:20px;">© 2014~2015 劲凯机电设备有限公司 版权所有　<a href="http://www.miibeian.gov.cn/" target="_blank">浙ICP备11056149号</a></p>    
     </div>
     <div class="fMenu">
-      <a href="view/reception/index.jsp">首页</a>
-      <a href="view/reception/about.jsp">关于劲凯</a>
+      <a href="<%=path%>/reception//index.jsp">首页</a>
+      <a href="<%=path%>/reception//about.jsp">关于劲凯</a>
       <a href="newsAction_onLoadNewsTitleToJsp">新闻资讯</a>
-      <a href="view/reception/plan.jsp">产品设计</a>
+      <a href="<%=path%>/reception//plan.jsp">产品设计</a>
     </div>
     <div class="fMenu">
       <a href="productAction_onLoadProductToJsp">产品中心</a>
