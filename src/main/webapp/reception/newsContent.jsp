@@ -17,18 +17,18 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 	<meta http-equiv="keywords" content="keyword1,keyword2,keyword3">
 	<meta http-equiv="description" content="This is my page">
 	
-	<script type="text/javascript" src="view/reception/js/jquery.min.1.7.js"></script>
-	<script type="text/javascript" src="view/reception/js/jquery-ui-1.10.3.custom.min.js"></script>
-	<script type="text/javascript" src="view/reception/js/jquery.easing.1.3.js"></script>
-	<script type="text/javascript" src="view/reception/js/diy_index/public-all.js"></script>
-	<script type="text/javascript" src="view/reception/js/public.js"></script>
+	<script type="text/javascript" src="<%=path%>/reception/js/jquery.min.1.7.js"></script>
+	<script type="text/javascript" src="<%=path%>/reception/js/jquery-ui-1.10.3.custom.min.js"></script>
+	<script type="text/javascript" src="<%=path%>/reception/js/jquery.easing.1.3.js"></script>
+	<script type="text/javascript" src="<%=path%>/reception/js/diy_index/public-all.js"></script>
+	<script type="text/javascript" src="<%=path%>/reception/js/public.js"></script>
   </head>
   
   <body onload="onLoadNewsContentData()">
    <jsp:include page="indexHeader.jsp"></jsp:include>
 	 <div id="banner">
 	  <div id="bannerCon">
-	    <img src="view/reception/images/banner_text.png" id="bannerText">
+	    <img src="<%=path%>/reception/images/banner_text.png" id="bannerText">
 	    <p id="bannerTit"><a href="http://www.fato.cn/" class="aGray">首页</a> - <a href="http://www.fato.cn/news.php" class="aGray">资讯动态</a> - <a href="http://www.fato.cn/news.php?partid=12" class="aGray">企业新闻</a><span>资讯动态</span></p>
 	  </div>
 	</div>
@@ -68,6 +68,6 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 	<input type="hidden" id='newsId' value="<%=request.getParameter("id")%>"></input>
 	<jsp:include page="indexBack.jsp"></jsp:include>
   </body>
-  <link href="view/reception/css/ime.css" rel="stylesheet" type="text/css">
-  <link href="view/reception/css/imeIn.css" rel="stylesheet" type="text/css">
+  <link href="<%=path%>/reception/css/ime.css" rel="stylesheet" type="text/css">
+  <link href="<%=path%>/reception/css/imeIn.css" rel="stylesheet" type="text/css">
 </html>

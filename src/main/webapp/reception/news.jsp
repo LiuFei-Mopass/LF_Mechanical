@@ -21,20 +21,20 @@
 <meta http-equiv="keywords" content="keyword1,keyword2,keyword3">
 <meta http-equiv="description" content="This is my page">
 
-<script type="text/javascript" src="view/reception/js/jquery.min.1.7.js"></script>
-<script type="text/javascript" src="view/reception/js/jquery-ui-1.10.3.custom.min.js"></script>
-<script type="text/javascript" src="view/reception/js/jquery.easing.1.3.js"></script>
-<script type="text/javascript" src="view/reception/js/diy_index/public-all.js"></script>
-<script type="text/javascript" src="view/reception/js/public.js"></script>
-<script type="text/javascript" src="view/reception/js/diy_index/news.js"></script>
-<script type="text/javascript" src="view/reception/js/diy_index/js.js"></script>
+<script type="text/javascript" src="<%=path%>/reception/js/jquery.min.1.7.js"></script>
+<script type="text/javascript" src="<%=path%>/reception/js/jquery-ui-1.10.3.custom.min.js"></script>
+<script type="text/javascript" src="<%=path%>/reception/js/jquery.easing.1.3.js"></script>
+<script type="text/javascript" src="<%=path%>/reception/js/diy_index/public-all.js"></script>
+<script type="text/javascript" src="<%=path%>/reception/js/public.js"></script>
+<script type="text/javascript" src="<%=path%>/reception/js/diy_index/news.js"></script>
+<script type="text/javascript" src="<%=path%>/reception/js/diy_index/js.js"></script>
 
 </head>
 <body onload="onLoadNewsData()">
 	<jsp:include page="indexHeader.jsp"></jsp:include>
 <div id="banner">
   <div id="bannerCon">
-    <img src="view/reception/images/banner_text.png" id="bannerText">
+    <img src="<%=path%>/reception/images/banner_text.png" id="bannerText">
     <p id="bannerTit"><a  class="aGray">首页</a> - <a  class="aGray">资讯动态</a> - <a class="aGray">企业新闻</a><span>资讯动态</span></p>
   </div>
 </div>
@@ -141,7 +141,7 @@ $("#menuSonList li").hover(function(){
 	border: 1px solid #EEE;
 	margin-right: 8px;
 	vertical-align: middle;
-	background: url(view/reception/images/page_right.gif) no-repeat center center;
+	background: url(<%=path%>/reception/images/page_right.gif) no-repeat center center;
 }
 
 .pageinfo {
@@ -220,6 +220,6 @@ $(".newslist a").hover(function(){
 <jsp:include page="indexBack.jsp"></jsp:include>
 </body>
 
-<link href="view/reception/css/ime.css" rel="stylesheet" type="text/css">
-<link href="view/reception/css/imeIn.css" rel="stylesheet" type="text/css">
+<link href="<%=path%>/reception/css/ime.css" rel="stylesheet" type="text/css">
+<link href="<%=path%>/reception/css/imeIn.css" rel="stylesheet" type="text/css">
 </html>

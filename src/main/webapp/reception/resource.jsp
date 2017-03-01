@@ -16,16 +16,16 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 	<meta http-equiv="expires" content="0">    
 	<meta http-equiv="keywords" content="keyword1,keyword2,keyword3">
 	<meta http-equiv="description" content="This is my page">
-	<link href="view/reception/css/ui-box.css" rel="stylesheet" type="text/css">
+	<link href="<%=path%>/reception/css/ui-box.css" rel="stylesheet" type="text/css">
 	
 	
 	
-	<script type="text/javascript" src="view/reception/js/jquery-1.8.3.min.js"></script>
-	<script type="text/javascript" src="view/reception/js/jquery-ui-1.10.3.custom.min.js"></script>
-	<script type="text/javascript" src="view/reception/js/jquery.easing.1.3.js"></script>
-	<script type="text/javascript" src="view/reception/js/diy_index/public-all.js"></script>
- 	<script type="text/javascript" src="view/reception/js/diy_index/resourece.js"></script>
-	<script type="text/javascript" src="view/reception/js/public.js"></script>
+	<script type="text/javascript" src="<%=path%>/reception/js/jquery-1.8.3.min.js"></script>
+	<script type="text/javascript" src="<%=path%>/reception/js/jquery-ui-1.10.3.custom.min.js"></script>
+	<script type="text/javascript" src="<%=path%>/reception/js/jquery.easing.1.3.js"></script>
+	<script type="text/javascript" src="<%=path%>/reception/js/diy_index/public-all.js"></script>
+ 	<script type="text/javascript" src="<%=path%>/reception/js/diy_index/resourece.js"></script>
+	<script type="text/javascript" src="<%=path%>/reception/js/public.js"></script>
 	
 	<style type="text/css">
 .man_left_left,.man_right {
@@ -122,7 +122,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 	<jsp:include page="indexHeader.jsp"></jsp:include>
 	<div id="banner">
 		<div id="bannerCon">
-			<img src="view/reception/images/banner_text.png" id="bannerText">
+			<img src="<%=path%>/reception/images/banner_text.png" id="bannerText">
 			<p id="bannerTit">
 				<a class="aGray">首页</a> - <a class="aGray">人力资源</a> - <a class="aGray">招聘职位</a><span></span>
 			</p>
@@ -199,6 +199,6 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 	</div>
 	<jsp:include page="indexBack.jsp"></jsp:include>
 </body>
-<link href="view/reception/css/ime.css" rel="stylesheet" type="text/css">
-<link href="view/reception/css/imeIn.css" rel="stylesheet" type="text/css">
+<link href="<%=path%>/reception/css/ime.css" rel="stylesheet" type="text/css">
+<link href="<%=path%>/reception/css/imeIn.css" rel="stylesheet" type="text/css">
 </html>
