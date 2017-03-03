@@ -4,6 +4,7 @@ import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.sql.Statement;
 
 public class DBConnection {
 	
@@ -22,7 +23,7 @@ public class DBConnection {
 				e.printStackTrace();
 			}
 		}
-		public Connection getConnection(){
+		public static Connection getConnection(){
 			
 			if(1==DBTYPE){
 				URL="jdbc:mysql://192.168.1.74:49056/ea1e45316b9f4?useUnicode=true&characterEncoding=UTF-8";
@@ -42,7 +43,7 @@ public class DBConnection {
 			}
 			return con;
 		}
-		public void close(ResultSet rs ,PreparedStatement ps ,  Connection con){
+		public static void close(ResultSet rs ,PreparedStatement ps , Statement s  ,  Connection con){
 			try {
 				if(rs!=null){
 					rs.close();
@@ -52,6 +53,9 @@ public class DBConnection {
 				}
 				if(con!=null){
 					con.close();
+				}
+				if(s!=null){
+					s.close();
 				}
 			} catch (SQLException e) {
 				e.printStackTrace();
