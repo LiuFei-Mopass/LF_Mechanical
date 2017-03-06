@@ -30,7 +30,7 @@ public class DBConnection {
 				USERNAME="15ddbe186c144";
 				PASSWORD="2095a6466b3b4";
 			}else{
-				URL="jdbc:mysql://localhost/Mechanical?useUnicode=true&characterEncoding=UTF-8";
+				URL="jdbc:mysql://localhost/lf_Mechanical?useUnicode=true&characterEncoding=UTF-8";
 				USERNAME="root";
 				PASSWORD="admin";
 			}

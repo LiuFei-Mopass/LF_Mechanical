@@ -103,4 +103,35 @@ public class StringUtil {
 		SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
 		return sdf.format(date);
 	}
+	
+	
+	/** 
+	* @Title: Mechanical 
+	* @Description: 大小写转换
+	* @param parms 0：大写   1：小写
+	* @return  
+	* @author LiuFei
+	* @2017年3月6日 下午5:09:43
+	* @throws 
+	*/
+	public static String CaseChandes(String parms){
+		
+		if(StringUtil.isEmpty(parms)){
+			throw new RuntimeException("参数为空!");
+		}
+		String type = "0";
+		String resultVal = "";
+		if("0".equals(type)){ //
+			resultVal = parms.toUpperCase();
+		}else if("1".equals(type)){
+			resultVal = parms.toLowerCase();
+		}
+		return resultVal;
+	}
+	
+	public static String KillNull(String parms){
+		return  parms==null?"":parms;
+	}
+	
+	
 }

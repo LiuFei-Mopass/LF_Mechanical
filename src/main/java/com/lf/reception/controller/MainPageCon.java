@@ -1,4 +1,4 @@
-package com.lf.reception.controlle;
+package com.lf.reception.controller;
 
 /** 
 * @Title: Mechanical 

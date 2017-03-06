@@ -74,6 +74,53 @@ public class JDBCUtils {
 		}
 		return list;
 	}
+	/** 
+	* @Title: Mechanical 
+	* @Description: 公用查询方法 关键字已填充
+	* @param sql
+	* @param parm
+	* @return  
+	* @author LiuFei
+	* @throws 
+	*/
+	public static List<Map<String, String>> selectCommList_ps(String selectFeild ,String selectTabName , String selectWhere){
+		
+		if(StringUtil.isNotEmpty(selectFeild) && StringUtil.isNotEmpty(selectTabName) && StringUtil.isNotEmpty(selectWhere) ){
+			throw new RuntimeException("参数为空!");
+		}
+		
+		Connection con = null;
+		PreparedStatement ps = null;
+		ResultSet rs =null;
+		List<Map<String, String>> list = new ArrayList<Map<String,String>>();
+		
+		
+		String sql = " SELECT "+ selectFeild +" FROM "+ StringUtil.CaseChandes(selectTabName) ;
+		if(StringUtil.isNotEmpty(selectWhere)){
+			sql += " WHERE " + selectWhere ;
+		}
+		log.info(" JDBC-执行SQL: "+sql+"  ");
+		try {
+			con = DBConnection.getConnection();
+			ps = con.prepareStatement(sql);
+			rs = ps.executeQuery();
+		    ResultSetMetaData md = rs.getMetaData(); //获得结果集结构信息,元数据
+		    int columnCount = md.getColumnCount();   //获得列数 
+	        while(rs.next()){
+	        	Map<String,String> rowData = new HashMap<String,String>();
+	        	for (int i = 1; i <= columnCount; i++) {
+	                rowData.put(md.getColumnName(i), rs.getString(i));
+	            }
+	        	list.add(rowData);
+	        }
+		} catch (SQLException e) {
+			e.printStackTrace();
+			log.error("  JDBC-执行SQL:："+e.getMessage()+"  ");
+		}finally{
+			DBConnection.close(rs, ps, null, con);
+		}
+		return list;
+	}
 	
 	
 	/** 
@@ -112,7 +159,7 @@ public class JDBCUtils {
 			cs = con.createStatement();
 			resultVal = cs.executeUpdate(sql);
 		} catch (SQLException e) {
-			log.error(" [ executeQuery 执行sql错误："+e.getMessage()+" ] ");
+			log.error("  executeQuery 执行sql错误："+e.getMessage()+" ] ");
 		}finally{
 			try {
 				if(rs!=null){
