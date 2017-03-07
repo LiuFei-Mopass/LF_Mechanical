@@ -1,4 +1,4 @@
-package com.lf.reception.bean;
+package com.lf.bean.reception;
 
 /** 
 * @Title: Mechanical 

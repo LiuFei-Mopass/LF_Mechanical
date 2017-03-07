@@ -1,8 +1,8 @@
-package com.lf.reception.dao;
+package com.lf.dao.reception;
 
 import java.util.List;
 
-import com.lf.reception.bean.RecNewsInfoObj;
+import com.lf.bean.reception.RecNewsInfoObj;
 
 /** 
 * @Title: Mechanical 

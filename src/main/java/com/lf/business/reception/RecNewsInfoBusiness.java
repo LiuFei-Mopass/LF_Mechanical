@@ -1,4 +1,4 @@
-package com.lf.reception.business;
+package com.lf.business.reception;
 
 /** 
 * @Title: Mechanical 

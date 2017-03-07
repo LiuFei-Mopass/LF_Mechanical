@@ -1,4 +1,4 @@
-package com.lf.reception.dao.impl;
+package com.lf.dao.reception.impl;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -6,8 +6,8 @@ import java.util.Map;
 
 import org.apache.log4j.Logger;
 
-import com.lf.reception.bean.RecNewsInfoObj;
-import com.lf.reception.dao.RecNewsInfoDao;
+import com.lf.bean.reception.RecNewsInfoObj;
+import com.lf.dao.reception.RecNewsInfoDao;
 import com.lf.util.jdbc.JDBCUtils;
 import com.lf.util.string.StringUtil;
 
@@ -75,7 +75,7 @@ public class RecNewsInfoDaoImpl implements RecNewsInfoDao {
 		
 		List<RecNewsInfoObj>  recNewsInfoList = new ArrayList<RecNewsInfoObj>();
 //		String tabName = "lf_news";
-		String tabName = "";
+		String tabName = "lf_news";
 		try {
 			List<Map<String, String>> selectCommList = JDBCUtils.selectCommList_ps(selectFeild, tabName, null);
 			for (int i = 0; i < selectCommList.size(); i++) {

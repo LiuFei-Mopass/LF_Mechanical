@@ -1,4 +1,4 @@
-package com.lf.backstage.bean;
+package com.lf.bean.backstage;
 
 /** 
 * @Title: Mechanical 

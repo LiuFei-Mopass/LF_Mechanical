@@ -1,4 +1,4 @@
-package com.lf.reception.controller;
+package com.lf.controller.reception;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;

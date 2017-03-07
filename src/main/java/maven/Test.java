@@ -6,9 +6,9 @@ import java.util.List;
 
 import org.springframework.dao.support.DaoSupport;
 
-import com.lf.reception.bean.RecNewsInfoObj;
-import com.lf.reception.dao.RecNewsInfoDao;
-import com.lf.reception.dao.impl.RecNewsInfoDaoImpl;
+import com.lf.bean.reception.RecNewsInfoObj;
+import com.lf.dao.reception.RecNewsInfoDao;
+import com.lf.dao.reception.impl.RecNewsInfoDaoImpl;
 
 public class Test {
 	
