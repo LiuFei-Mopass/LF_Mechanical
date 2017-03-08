@@ -25,6 +25,9 @@ public interface SysEnumsDao {
 	public List<SysEnumsObj> selectSysEnumsList(String sysKey);
 	
 	
+	public List<SysEnumsObj> selectSysEnumsAll();
+	
+	
 	/** 
 	* @Title: Mechanical 
 	* @Description: 查询枚举值对象
@@ -35,6 +38,21 @@ public interface SysEnumsDao {
 	* @throws 
 	*/
 	public SysEnumsObj selectSysEnums(String sysKey);
+	
+	
+	
+	
+	
+	/** 
+	* @Title: Mechanical 
+	* @Description: 添加枚举值
+	* @param enumsObj
+	* @return  
+	* @author LiuFei
+	* @2017年3月8日 下午7:41:08
+	* @throws 
+	*/
+	public int insert(SysEnumsObj enumsObj);
 	
 	
 	

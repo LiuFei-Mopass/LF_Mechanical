@@ -1,5 +1,8 @@
 
 
+
+--CREATE DATABASE `lf_mechanical` DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci;
+
 -- 创建表product表
 CREATE TABLE lf_product(
 	seriald VARCHAR(64) PRIMARY KEY,

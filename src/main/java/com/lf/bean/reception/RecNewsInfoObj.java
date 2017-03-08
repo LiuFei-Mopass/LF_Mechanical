@@ -8,37 +8,19 @@ package com.lf.bean.reception;
 */
 public class RecNewsInfoObj {
 
-	private String seriald;
+	private String serialId;
 	private String newsTitle;
 	private String newsContent;
-	private String newAuother;
+	private String newsAuother;
 	private String clickNum ;
 	private String createTime;
 	private String updateTime ;
 	private String isDelete; // '0-有效数据，1-无效数据'
-	
-	
-	public RecNewsInfoObj() {
-		super();
+	public String getSerialId() {
+		return serialId;
 	}
-	public RecNewsInfoObj(String seriald, String newsTitle, String newsContent,
-			String newAuother, String clickNum, String createTime,
-			String updateTime, String isDelete) {
-		super();
-		this.seriald = seriald;
-		this.newsTitle = newsTitle;
-		this.newsContent = newsContent;
-		this.newAuother = newAuother;
-		this.clickNum = clickNum;
-		this.createTime = createTime;
-		this.updateTime = updateTime;
-		this.isDelete = isDelete;
-	}
-	public String getSeriald() {
-		return seriald;
-	}
-	public void setSeriald(String seriald) {
-		this.seriald = seriald;
+	public void setSerialId(String serialId) {
+		this.serialId = serialId;
 	}
 	public String getNewsTitle() {
 		return newsTitle;
@@ -52,11 +34,11 @@ public class RecNewsInfoObj {
 	public void setNewsContent(String newsContent) {
 		this.newsContent = newsContent;
 	}
-	public String getNewAuother() {
-		return newAuother;
+	public String getNewsAuother() {
+		return newsAuother;
 	}
-	public void setNewAuother(String newAuother) {
-		this.newAuother = newAuother;
+	public void setNewsAuother(String newsAuother) {
+		this.newsAuother = newsAuother;
 	}
 	public String getClickNum() {
 		return clickNum;
@@ -82,4 +64,7 @@ public class RecNewsInfoObj {
 	public void setIsDelete(String isDelete) {
 		this.isDelete = isDelete;
 	}
+	
+	
+	
 }

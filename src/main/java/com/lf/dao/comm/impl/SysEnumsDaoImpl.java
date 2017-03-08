@@ -1,10 +1,12 @@
 package com.lf.dao.comm.impl;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 
 import com.lf.bean.comm.SysEnumsObj;
 import com.lf.dao.comm.SysEnumsDao;
+import com.lf.util.comm.CommMethod;
 import com.lf.util.jdbc.JDBCUtils;
 
 /** 
@@ -17,52 +19,56 @@ import com.lf.util.jdbc.JDBCUtils;
 public class SysEnumsDaoImpl implements SysEnumsDao {
 	
 	
+	SysEnumsObj  FeildObj= new SysEnumsObj();
+	
+	
 	String selectFeild = "sys_id,sys_key,sys_value,sys_desc,sys_key1,sysv_alue1,sys_desc1,sys_sequ,is_delete";
 	
-	
-	public SysEnumsObj mapToObj(Map<String, String> parMap){
-		
-		String[] split = selectFeild.split(",");
-		for (int i = 0; i < split.length; i++) {
-			
-			
-			String[] split2 = split[i].split("_");
-			String feild = split2[1];
-			
-			
-			//feild = feild.charAt(0).t
-			
-			
-			
-			
-		}
-		return null;
-		
-		
-		
-		
-		
+	public SysEnumsDaoImpl(){
+		selectFeild = CommMethod.ObjectFeildToString(FeildObj);
 	}
-	
-	
 	
 
 	@Override
 	public List<SysEnumsObj> selectSysEnumsList(String sysKey) {
 		// TODO Auto-generated method stub
-		
-		List<Map<String, String>> selectCommList_ps = JDBCUtils.selectCommList_ps(selectFeild, "", "");
-		
-		
-		
-		
-		return null;
+		List<SysEnumsObj>  enumsList = new ArrayList<SysEnumsObj>();
+		List<Map<String, String>> selectCommList = JDBCUtils.selectCommList_ps(selectFeild, "lf_sysenums", "");
+		for (Map<String, String> map : selectCommList) {
+			SysEnumsObj  enumsObj= new SysEnumsObj();
+			CommMethod.mapToObjectDB(enumsObj, map);
+			enumsList.add(enumsObj);
+		}
+		return enumsList;
 	}
 
 	@Override
 	public SysEnumsObj selectSysEnums(String sysKey) {
 		// TODO Auto-generated method stub
 		return null;
+	}
+
+
+
+
+	@Override
+	public int insert(SysEnumsObj enumsObj) {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+
+	@Override
+	public List<SysEnumsObj> selectSysEnumsAll() {
+		// TODO Auto-generated method stub
+		List<SysEnumsObj>  enumsList = new ArrayList<SysEnumsObj>();
+		List<Map<String, String>> selectCommList = JDBCUtils.selectCommList_ps(selectFeild, "lf_sysenums", "");
+		for (Map<String, String> map : selectCommList) {
+			SysEnumsObj  enumsObj= new SysEnumsObj();
+			CommMethod.mapToObjectDB(enumsObj, map);
+			enumsList.add(enumsObj);
+		}
+		return enumsList;
 	}
 
 }

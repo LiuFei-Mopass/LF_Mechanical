@@ -74,13 +74,16 @@ public class JDBCUtils {
 		}
 		return list;
 	}
+
 	/** 
 	* @Title: Mechanical 
 	* @Description: 公用查询方法 关键字已填充
-	* @param sql
-	* @param parm
+	* @param selectFeild
+	* @param selectTabName
+	* @param selectWhere
 	* @return  
 	* @author LiuFei
+	* @2017年3月8日 下午7:55:29
 	* @throws 
 	*/
 	public static List<Map<String, String>> selectCommList_ps(String selectFeild ,String selectTabName , String selectWhere){
