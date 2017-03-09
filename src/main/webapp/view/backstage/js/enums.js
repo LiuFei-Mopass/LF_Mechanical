@@ -1,7 +1,7 @@
 $(function(){
 	$("#dg_par_enums").datagrid({  
 		
-	    url:'getEnumsAll.html',   
+	    url:'getParEnumsList.html',   
 	    loadMsg : '正在玩命的为您加载。。。', //加载数据是显示的提示 
 	    pagination : true, //是否显示分页工具栏
 		fitColumns : true,  //真正的自动展开/收缩列的大小，以适应网格的宽度，防止水平滚动。

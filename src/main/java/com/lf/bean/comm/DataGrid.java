@@ -10,6 +10,16 @@ import java.util.List;
 public class DataGrid {
 	private String total;
 	private List rows;
+	
+	
+	public DataGrid() {
+		super();
+	}
+	public DataGrid(String total, List rows) {
+		super();
+		this.total = total;
+		this.rows = rows;
+	}
 	public String getTotal() {
 		return total;
 	}

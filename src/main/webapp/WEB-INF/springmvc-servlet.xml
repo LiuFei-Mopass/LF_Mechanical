@@ -15,10 +15,10 @@
     <context:component-scan base-package="com.lf.controller" />
 
     <!-- 注册HandlerMapper、HandlerAdapter两个映射类 -->
-    <mvc:annotation-driven />
     
     
     <!-- 
+    <mvc:annotation-driven />
     
     <mvc:interceptors>
 		<mvc:interceptor>
@@ -37,33 +37,23 @@
         <property name="prefix" value="/view/"></property>
         <property name="suffix" value=".jsp"></property>
     </bean>
-	<!-- 避免IE执行ajax时，返回json出现下载文件 -->
-	<bean id="mappingJacksonHttpMessageConverter"
-        class="org.springframework.http.converter.json.MappingJackson2HttpMessageConverter">
-        <property name="supportedMediaTypes">
-            <list>
-                <value>text/html;charset=UTF-8</value>
-            </list>
-        </property>
-    </bean>
 
-	<!-- 从请求和响应读取/编写字符串 -->
-	<bean id="stringHttpMessage" class="org.springframework.http.converter.StringHttpMessageConverter">
-		<property name="supportedMediaTypes">
-			<list>
-				<value>text/plain;charset=UTF-8</value>
-			</list>
-		</property>
-	</bean>
-    <!-- 启动SpringMVC的注解功能，完成请求和注解POJO的映射 -->
-    <bean
-        class="org.springframework.web.servlet.mvc.annotation.AnnotationMethodHandlerAdapter">
-        <property name="messageConverters">
-            <list>
-                <!-- json转换器 -->
-                <ref bean="mappingJacksonHttpMessageConverter" />
-            </list>
-        </property>
-    </bean>
+
+	<!-- JSON -->
+<mvc:annotation-driven>  
+        <mvc:message-converters register-defaults="true">  
+            <!--json处理-->  
+            <bean  
+                class="org.springframework.http.converter.json.MappingJackson2HttpMessageConverter">  
+                <property name="supportedMediaTypes">  
+                    <list>  
+                        <value>application/json;charset=UTF-8</value>  
+                        <value>text/html;charset=UTF-8</value>  
+                    </list>  
+                </property>  
+            </bean>  
+        </mvc:message-converters>  
+    </mvc:annotation-driven> 
+
 	
 </beans>

@@ -15,6 +15,7 @@ import com.lf.dao.comm.SysEnumsDao;
 import com.lf.dao.comm.impl.SysEnumsDaoImpl;
 
 @Controller
+@RequestMapping(value = "view/backstage/")
 public class EnumsController {
 	
 	Logger log = Logger.getLogger("Mechanical-Controller");
@@ -25,13 +26,6 @@ public class EnumsController {
 	@RequestMapping(value="/getEnumsAll.html" , method=RequestMethod.POST)
 	public DataGrid getEnumsAll(Integer page,Integer rows){
 		
-		System.out.println("00000000000000000000000000000000");
-		System.out.println("00000000000000000000000000000000");
-		System.out.println("00000000000000000000000000000000");
-		System.out.println("00000000000000000000000000000000");
-		System.out.println("00000000000000000000000000000000");
-		System.out.println("00000000000000000000000000000000");
-		System.out.println("00000000000000000000000000000000");
 		
 		DataGrid dg = new DataGrid();
 		
@@ -45,10 +39,12 @@ public class EnumsController {
 		return dg;
 	}
 	
+	
+	@ResponseBody
 	@RequestMapping(value="/getParEnumsList.html")
 	public DataGrid getParEnumsList(Integer page,Integer rows) throws Exception{
 		DataGrid dg = new DataGrid();
-		if(page!=null && rows!=null ){
+		if(page==null && rows==null ){
 			throw new Exception("参数不能为空!");
 		}
 		

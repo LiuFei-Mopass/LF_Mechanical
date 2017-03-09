@@ -93,7 +93,7 @@ public class JDBCUtils {
 	public static List<Map<String, String>> selectCommList_ps(String selectFeild ,String selectTabName , Map<String , String> selectWhere 
 			, PageObj page , Map<String , String> orderBy){
 		
-		if(StringUtil.isNotEmpty(selectFeild) && StringUtil.isNotEmpty(selectTabName)){
+		if(StringUtil.isEmpty(selectFeild) && StringUtil.isEmpty(selectTabName)){
 			throw new RuntimeException("参数为空!");
 		}
 		
@@ -118,7 +118,7 @@ public class JDBCUtils {
 			sql.append(" ORDER BY ").append(" "+orderBy.get("orderby")).append(" "+orderBy.get("desc"));
 		}
 		if(page!=null ){
-			sql.append(" limit ").append(page.getPage()).append(page.getRows());
+			sql.append(" limit ").append(page.getPage()).append(",").append(page.getRows());
 		}
 		
 		log.info(" JDBC-执行SQL: "+sql.toString()+"  ");

@@ -23,6 +23,9 @@ public class SysEnumsObj {
 	private String createTime;
 	private String updateTime;
 	private String isDelete;
+	
+	
+	
 	public String getSysId() {
 		return sysId;
 	}
