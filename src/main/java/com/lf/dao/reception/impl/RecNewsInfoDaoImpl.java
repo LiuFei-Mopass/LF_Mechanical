@@ -81,7 +81,7 @@ public class RecNewsInfoDaoImpl implements RecNewsInfoDao {
 		selectFeild = CommMethod.ObjectFeildToString(newsInfo);
 		
 		try {
-			List<Map<String, String>> selectCommList = JDBCUtils.selectCommList_ps(selectFeild, tabName, null);
+			List<Map<String, String>> selectCommList = JDBCUtils.selectCommList_ps(selectFeild, tabName, null, null, null);
 			for (int i = 0; i < selectCommList.size(); i++) {
 				RecNewsInfoObj recNewsInfo = new RecNewsInfoObj();
 				CommMethod.mapToObjectDB(recNewsInfo, selectCommList.get(i));

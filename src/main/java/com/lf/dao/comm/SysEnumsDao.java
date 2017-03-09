@@ -2,6 +2,8 @@ package com.lf.dao.comm;
 
 import java.util.List;
 
+import com.lf.bean.comm.CommObj;
+import com.lf.bean.comm.PageObj;
 import com.lf.bean.comm.SysEnumsObj;
 
 /** 
@@ -25,6 +27,14 @@ public interface SysEnumsDao {
 	public List<SysEnumsObj> selectSysEnumsList(String sysKey);
 	
 	
+	/** 
+	* @Title: Mechanical 
+	* @Description: 查找非父子关联枚举值
+	* @return  
+	* @author LiuFei
+	* @2017年3月9日 上午10:19:24
+	* @throws 
+	*/
 	public List<SysEnumsObj> selectSysEnumsAll();
 	
 	
@@ -53,6 +63,30 @@ public interface SysEnumsDao {
 	* @throws 
 	*/
 	public int insert(SysEnumsObj enumsObj);
+	
+	
+	
+	/** 
+	* @Title: Mechanical 
+	* @Description: 查找父类枚举值
+	* @param commobj
+	* @return  
+	* @author LiuFei
+	* @2017年3月9日 上午10:18:29
+	* @throws 
+	*/
+	public List<SysEnumsObj> getParEnumsList(PageObj pageobj);
+	
+	/** 
+	* @Title: Mechanical 
+	* @Description: 查找子类枚举值
+	* @param commobj
+	* @return  
+	* @author LiuFei
+	* @2017年3月9日 上午10:18:45
+	* @throws 
+	*/
+	public List<SysEnumsObj> getChildEnumsList(CommObj commobj);
 	
 	
 	

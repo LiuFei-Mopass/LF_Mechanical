@@ -4,7 +4,6 @@
 <%
 
 String path = request.getContextPath();
-String paths = request.getContextPath()+"/view/backstage/";
 String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path+"/";
 
 %>
@@ -16,12 +15,12 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 <title>Insert title here</title>
 
 
-	<link rel="stylesheet" type="text/css" href="<%=paths%>easyui/themes/default/easyui.css" />   
-	<link rel="stylesheet" type="text/css" href="<%=paths%>easyui/themes/icon.css" />   
-	<script type="text/javascript" src="<%=paths%>easyui/jquery-1.8.3.min.js"></script>   
-	<script type="text/javascript" src="<%=paths%>easyui/jquery.easyui.min.js"></script> 
-	<script type="text/javascript" src="<%=paths%>js/enums.js"></script> 
-	<script type="text/javascript" src="<%=paths%>js/easyui_public.js"></script> 
+	<link rel="stylesheet" type="text/css" href="<%=path%>/view/backstage/easyui/themes/default/easyui.css" />   
+	<link rel="stylesheet" type="text/css" href="<%=path%>/view/backstage/easyui/themes/icon.css" />   
+	<script type="text/javascript" src="<%=path%>/view/backstage/easyui/jquery-1.8.3.min.js"></script>   
+	<script type="text/javascript" src="<%=path%>/view/backstage/easyui/jquery.easyui.min.js"></script> 
+	<script type="text/javascript" src="<%=path%>/view/backstage/js/enums.js"></script> 
+	<script type="text/javascript" src="<%=path%>/view/backstage/js/easyui_public.js"></script> 
 	<style type="text/css">
 	html,body,div{margin: 0;padding:0;}
 	

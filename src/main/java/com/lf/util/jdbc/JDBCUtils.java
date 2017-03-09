@@ -13,6 +13,7 @@ import java.util.Map;
 
 import org.apache.log4j.Logger;
 
+import com.lf.bean.comm.PageObj;
 import com.lf.util.string.StringUtil;
 
 public class JDBCUtils {
@@ -75,20 +76,24 @@ public class JDBCUtils {
 		return list;
 	}
 
+
 	/** 
 	* @Title: Mechanical 
-	* @Description: 公用查询方法 关键字已填充
+	* @Description: TODO(这里用一句话描述这个方法的作用) 
 	* @param selectFeild
 	* @param selectTabName
 	* @param selectWhere
+	* @param page
+	* @param orderBy   key:orderby/desc
 	* @return  
 	* @author LiuFei
-	* @2017年3月8日 下午7:55:29
+	* @2017年3月9日 上午11:45:44
 	* @throws 
 	*/
-	public static List<Map<String, String>> selectCommList_ps(String selectFeild ,String selectTabName , String selectWhere){
+	public static List<Map<String, String>> selectCommList_ps(String selectFeild ,String selectTabName , Map<String , String> selectWhere 
+			, PageObj page , Map<String , String> orderBy){
 		
-		if(StringUtil.isNotEmpty(selectFeild) && StringUtil.isNotEmpty(selectTabName) && StringUtil.isNotEmpty(selectWhere) ){
+		if(StringUtil.isNotEmpty(selectFeild) && StringUtil.isNotEmpty(selectTabName)){
 			throw new RuntimeException("参数为空!");
 		}
 		
@@ -97,15 +102,29 @@ public class JDBCUtils {
 		ResultSet rs =null;
 		List<Map<String, String>> list = new ArrayList<Map<String,String>>();
 		
-		
-		String sql = " SELECT "+ selectFeild +" FROM "+ StringUtil.CaseChandes(selectTabName) ;
-		if(StringUtil.isNotEmpty(selectWhere)){
-			sql += " WHERE " + selectWhere ;
+		StringBuffer sql = new StringBuffer();
+		sql.append(" SELECT ").append(selectFeild).append(" FROM ").append(StringUtil.CaseChandes(selectTabName));
+		sql.append( " WHERE  1=1 ");
+		if(null != selectWhere && selectWhere.size()>0){
+			for (Map.Entry<String, String> map :selectWhere.entrySet() ) {
+				if(map.getValue()==null || map.getValue().equals("null")){
+					sql.append(" AND  " +map.getKey() + " is null ");
+				}else{
+					sql.append(" AND  " +map.getKey() + "=" + "'"+map.getValue()+"' ");
+				}
+			}
 		}
-		log.info(" JDBC-执行SQL: "+sql+"  ");
+		if(orderBy!=null && orderBy.size()>0){
+			sql.append(" ORDER BY ").append(" "+orderBy.get("orderby")).append(" "+orderBy.get("desc"));
+		}
+		if(page!=null ){
+			sql.append(" limit ").append(page.getPage()).append(page.getRows());
+		}
+		
+		log.info(" JDBC-执行SQL: "+sql.toString()+"  ");
 		try {
 			con = DBConnection.getConnection();
-			ps = con.prepareStatement(sql);
+			ps = con.prepareStatement(sql.toString());
 			rs = ps.executeQuery();
 		    ResultSetMetaData md = rs.getMetaData(); //获得结果集结构信息,元数据
 		    int columnCount = md.getColumnCount();   //获得列数 

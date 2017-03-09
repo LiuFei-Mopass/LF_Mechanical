@@ -12,10 +12,13 @@
        http://www.springframework.org/schema/mvc/spring-mvc.xsd">
 
     <!-- 配置扫描的包 -->
-    <context:component-scan base-package="com.lf.controller.*" />
+    <context:component-scan base-package="com.lf.controller" />
 
     <!-- 注册HandlerMapper、HandlerAdapter两个映射类 -->
     <mvc:annotation-driven />
+    
+    
+    <!-- 
     
     <mvc:interceptors>
 		<mvc:interceptor>
@@ -23,6 +26,7 @@
 			<bean class="com.lf.interceptor.HandlerInterceptor"/>
 		</mvc:interceptor>
 	</mvc:interceptors>
+     -->
 
     <!-- 访问静态资源 -->
     <mvc:default-servlet-handler />
@@ -43,6 +47,14 @@
         </property>
     </bean>
 
+	<!-- 从请求和响应读取/编写字符串 -->
+	<bean id="stringHttpMessage" class="org.springframework.http.converter.StringHttpMessageConverter">
+		<property name="supportedMediaTypes">
+			<list>
+				<value>text/plain;charset=UTF-8</value>
+			</list>
+		</property>
+	</bean>
     <!-- 启动SpringMVC的注解功能，完成请求和注解POJO的映射 -->
     <bean
         class="org.springframework.web.servlet.mvc.annotation.AnnotationMethodHandlerAdapter">
