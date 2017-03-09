@@ -29,6 +29,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 <body>
 
 <table id="dg_par_enums"></table> 
+<div id="dd_par_enums_add"></div> 
 
 </body>
 </html>
